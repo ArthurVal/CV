@@ -241,9 +241,9 @@
 
     % ------------------------------------------------
     \vspace{3mm}
-    \profilesection{Technical Skills}{1.2cm}
+    \profilesection{Compétences}{1.8cm}
 
-    {\large \textbf{Overview}}
+    {\large \textbf{Aperçu}}
 
     \skills
 
