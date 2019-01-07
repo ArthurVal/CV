@@ -236,30 +236,30 @@
               \end{array}
               $} & \href{https://www.github.com/\cvgithub}{\cvgithub} \\
             }   
-            
+
     \end{tabular}
 
-    %------------------------------------------------
+    % ------------------------------------------------
     \vspace{3mm}
     \profilesection{Technical Skills}{1.2cm}
-    
+
     {\large \textbf{Overview}}
 
-	\skills
-        
-        %------------------------------------------------
-        
-        \vspace{3mm}
-       
-	 {\large \textbf{Programming}} 
+    \skills
 
-		 \programming
-         
-        \vspace{3mm}
-        \profilesection{Education}{3cm} 
-        
-        \education
-      
+    % ------------------------------------------------
+
+    \vspace{3mm}
+
+    {\large \textbf{Programmation}}
+
+    \programming
+
+    \vspace{3mm}
+    \profilesection{Education}{3cm}
+
+    \education
+
   \end{textblock}
 }
 
