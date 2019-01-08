@@ -347,7 +347,7 @@
 	#1&\parbox[t]{0.83\textwidth}{%
 		\textbf{#3}% 
 		\hfill%
-		{\footnotesize#4}%
+		{\footnotesize \textcolor{pblue}{#4}}%
         }\\%
     #2&\parbox[t]{0.83\textwidth}{%
 		\ifblank{#5}{}{#5 \\}
