@@ -115,6 +115,7 @@
 \pagestyle{empty} % Disable headers and footers
 
 \setlength{\parindent}{0pt} % Disable paragraph indentation
+\newcounter{num_element}
 
 % --------------------------------------------------------------------------------------
 % 	FONTS
@@ -153,21 +154,44 @@
 
 % Command for printing skill progress bars
 \newcommand\programming[1]{ 
-	\renewcommand{\programming}{
-		\begin{tikzpicture}
-        	% \node [above right] at (0, 4) {$0 \: LOC \: \arrow{3.2} \: 5000 \: LOC$};
-			\foreach [count=\i] \x/\y in {#1}{
-				\draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.4);
-				\draw[fill=white,mainblue](0,\i) rectangle (\y,\i+0.4);
-				\node [above right] at (0,\i+0.35) {\x};
-			}
-		\end{tikzpicture}
-	}
+  \renewcommand{\programming}{
+    \drawskillz{Programmation}{#1}
+  }
 }
+
+\newcommand\lang[1]{ 
+  \renewcommand{\lang}{
+    \drawskillz[$A\,\to\,B$]{Langues}{#1}
+  }
+}
+
 \newcommand\education[1]{ 
-	\renewcommand{\education}{
-		{#1}
-	}
+  \renewcommand{\education}{
+    {#1}
+  }
+}
+
+\newcommand{\drawskillz}[3][{}]
+{
+  {\large \textbf{#2}}            %Title
+  \newline
+  \newline  
+  \begin{tikzpicture}
+
+    \setcounter{num_element}{1}
+    \foreach [count=\i] \x/\y in {#3}{ %Actual graph (Starts from bottom to top)
+      \draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.4);
+      \draw[fill=white,mainblue](0,\i) rectangle (\y,\i+0.4);
+      \node [above right] at (0,\i+0.35) {\x};
+      \stepcounter{num_element}
+    }
+    \ifthenelse{\equal{#1}{}}{  %Then
+      \relax
+    }{                          %Else
+      \node [above right] at (0, \value{num_element}) {$\: Debutant \: \arrow{3.0} \: Bilingue \:$}; %Legend
+    }
+
+  \end{tikzpicture}
 }
 
 %----------------------------------------------------------------------------------------
@@ -179,18 +203,18 @@
       \node [rectangle, fill=sidecolor, anchor=north, minimum width=9cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
   \end{tikzpicture}
 
-  %------------------------------------------------
+  % ------------------------------------------------
 
   \begin{textblock}{6}(0.5, 0.2)
 
-    %------------------------------------------------
+    % ------------------------------------------------
     
-        \vspace{4mm}
+    \vspace{4mm}
     {\Huge\color{pblue}\cvname}
     
     \vspace{2mm}
 
-    %------------------------------------------------
+    % ------------------------------------------------
     
     {\Large\color{black!80}\cvjobtitle}
 
@@ -245,24 +269,18 @@
 
     % ------------------------------------------------
     \vspace{3mm}
-    \profilesection{Compétences}{1.8cm}
+    
+    \profilesection{Compétences}{1.5cm}
 
     {\large \textbf{Aperçu}}
 
     \skills
 
     % ------------------------------------------------
-
-    \vspace{3mm}
-
-    {\large \textbf{Programmation}}
-
     \programming
-
-    \vspace{3mm}
-    \profilesection{Education}{3cm}
-
-    \education
+    
+    \lang
+    % ------------------------------------------------    
 
   \end{textblock}
 }
@@ -384,4 +402,3 @@
     % sets the opacity at which the bubble text is shown
     bubble text opacity = 1,
 }
-
