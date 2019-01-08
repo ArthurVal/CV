@@ -29,24 +29,27 @@
 
 % Command for printing skill overview bubbles
 \newcommand\skills{
-~
-	\smartdiagram[bubble diagram]{
-        \textbf{\large Ingénieur}\\\textbf{\large Robotique},
-        \textbf{\large \href{http://www.ros.org/}{R.O.S.}}\\\textbf{Intergiciel},
-        \textbf{\large \href{https://en.wikipedia.org/wiki/Simultaneous_localization_and_mapping}{S.L.A.M.}},
-        \textbf{\large Kalman}\\\textbf{\href{https://en.wikipedia.org/wiki/Extended_Kalman_filter}{EKF} | \href{https://en.wikipedia.org/wiki/Kalman_filter#Unscented_Kalman_filter}{UKF}},
-        \textbf{\large Embarqué}\\\textbf{ARM-DSP},
-        \textbf{~~\huge \faLinux~~}\\\textbf{\large \href{https://www.yoctoproject.org/}{Yocto}},
-        \textbf{Traitement}\\\textbf{Image}
-    }
+  ~
+  \smartdiagram[bubble diagram]{
+    \textbf{\large Ingénieur}\\\textbf{\large Robotique},
+    \textbf{\large \ros}\\\textbf{Intergiciel},
+    \textbf{\large \href{https://en.wikipedia.org/wiki/Simultaneous_localization_and_mapping}{S.L.A.M.}},
+    \textbf{\large Kalman}\\\textbf{\href{https://en.wikipedia.org/wiki/Extended_Kalman_filter}{EKF} | \href{https://en.wikipedia.org/wiki/Kalman_filter#Unscented_Kalman_filter}{UKF}},
+    \textbf{\large Embarqué}\\\textbf{ARM-DSP},
+    \textbf{~~\huge \faLinux~~}\\\textbf{\large \href{https://www.yoctoproject.org/}{Yocto}},
+    \textbf{Traitement}\\\textbf{Image}
+  }
 }
-
+  
+\newcommand{\cea}{\href{http://www.cea.fr/}{CEA}}
+\newcommand{\ros}{\href{http://www.ros.org/}{R.O.S.}}
+  
 % Programming skill bars (0->6)
 \programming{
   {JavaScript $\textbullet$ \large \LaTeX / 1},
   {Matlab $\textbullet$ Simulink / 3},
   {Bash $\textbullet$ CMake $\textbullet$ Make $\textbullet$ Emacs / 3.5},
-  {C $\textbullet$ C++  $\textbullet$ Python $\textbullet$ Git $\textbullet$ R.O.S. / 5}}
+  {C $\textbullet$ C++  $\textbullet$ Python $\textbullet$ Git $\textbullet$ \ros / 5}}
 
 
 % Lang skill bars (0->6)
@@ -127,13 +130,13 @@
   {Juil 2018 -}
   {Présent}
   {CDD: Ingénieur Recherche et Développement}
-  {\href{http://www.cea.fr/}{CEA-DRF-IRFU, Saclay}}
+  {\cea-DRF-IRFU, Saclay}
   {}
   {
     Responsable du banc de test logiciel embarqué caméra ECLAIRs
     \begin{itemize}
     \item \textbf{\href{http://www.svom.fr/}{Projet SVOM}} - Collaboration
-      \textbf{CEA - \href{http://www.irap.omp.eu/}{IRAP} - \href{https://cnes.fr/fr}{CNES} }     
+      \textbf{\cea - \href{http://www.irap.omp.eu/}{IRAP} - \href{https://cnes.fr/fr}{CNES} }
     \item Développement C++/Python de l'infrastructure de test globale
     \item Utilisation séquenceur de test \href{https://docs.pytest.org/en/latest/contents.html}{PyTest}
     \item En charge de la création des scripts de tests unitaires Python
@@ -144,12 +147,12 @@
   {2017}
   {}
   {CDD: Ingénieur Recherche et Développement}
-  {\href{http://www.cea.fr/}{CEA-DRT-LIST, Saclay}}
+  {\cea-DRT-LIST, Saclay}
   {}
   {
     Responsable développements logiciel pour applications robotique
     \begin{itemize}
-    \item Co-responsable développement logiciel (Git Admin - \href{http://www.ros.org/}{R.O.S.})
+    \item Co-responsable développement logiciel (Git Admin - \ros)
     \item Importation algorithme SLAM hybride topologique pour robot mobile (Lidar / IMU / Caméra RBG-D / ...)
     \item Création d'applications C++ pour prototype
       multi-\href{https://en.wikipedia.org/wiki/System_on_a_chip}{SoC} (Renesas R-Car
@@ -175,7 +178,7 @@
       et vocal) sur robot
       \href{https://spectrum.ieee.org/automaton/robotics/humanoids/aldebaran-robotics-introduces-romeo-finally}{ROMEO}
       d'Aldebaran Robotics
-    \item Création d'interfaces détecteurs d'objets / simulateurs via \href{http://www.ros.org/}{R.O.S.}
+    \item Création d'interfaces détecteurs d'objets / simulateurs via \ros
     \end{itemize}
   }
   \\
@@ -191,7 +194,7 @@
         RIDDLE}} : Fusion traitement d'image / détecteur radiofréquence pour
     détection d'objets
     \begin{itemize}
-    \item Développement C++ sur \href{http://www.ros.org/}{R.O.S.} de briques
+    \item Développement C++ sur \ros de briques
       détection d'objets via traitement d'image
       (\href{http://www.stefan-hinterstoisser.com/papers/hinterstoisser2011linemod.pdf}{LINEMOD}
       \& \href{http://wiki.ros.org/tabletop_object_detector}{TABLETOP})
@@ -214,8 +217,7 @@
     \begin{itemize}
     \item Développement C++ de filtres de Kalman Unscented Multi-Hypothèses
       (MH-UKF)
-    \item Détection de source sonore binaurale sur
-      \href{http://www.ros.org/}{R.O.S.}
+    \item Détection de source sonore binaurale sur \ros
     \end{itemize}
   }
   \\
