@@ -161,7 +161,7 @@
 
 \newcommand\lang[1]{ 
   \renewcommand{\lang}{
-    \drawskillz[$A\,\to\,B$]{Langues}{#1}
+    \drawskillz[$A\,\to\,B$]{Langues}{#1} %Note: Arg par défaut marche pas ...
   }
 }
 
@@ -188,6 +188,7 @@
     \ifthenelse{\equal{#1}{}}{  %Then
       \relax
     }{                          %Else
+      % TODO: Trouver le moyen de récup l'arg par défaut et remplacer la fleche ...
       \node [above right] at (0, \value{num_element}) {$\: Debutant \: \arrow{3.0} \: Bilingue \:$}; %Legend
     }
 
