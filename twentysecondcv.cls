@@ -26,7 +26,7 @@
 \RequirePackage{parskip}
 
 \usepackage{enumitem}
-\setlist[itemize]{leftmargin=*}
+\setlist[itemize]{topsep=0pt, leftmargin=*}
 
 \RequirePackage[hidelinks]{hyperref}
 \hypersetup{
@@ -344,16 +344,17 @@
 % 	}\\
 % }
 
-\newcommand{\twentyitem}[6]{%
-	#1&\parbox[t]{0.83\textwidth}{%
-		\textbf{#3}% 
-		\hfill%
-		{\footnotesize \textcolor{pblue}{#4}}%
-        }\\%
-    #2&\parbox[t]{0.83\textwidth}{%
-		\ifblank{#5}{}{#5 \\}
-		#6%
-	}\\
+\newcommand{\twentyitem}[5]{%
+  \footnotesize #1&\parbox[t]{0.86\textwidth}{%
+    \textbf{#3}% 
+    \hfill%
+    {
+      \footnotesize \textcolor{pblue}{#4}
+    }%
+  }\\%
+  \footnotesize #2&\parbox[t]{0.86\textwidth}{%
+    #5%
+  }\\
 }
 
 %----------------------------------------------------------------------------------------
