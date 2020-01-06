@@ -1,0 +1,258 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Twenty Seconds Resume/CV
+% LaTeX Template
+% Version 1.0 (14/7/16)
+%
+% Original author:
+% Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by
+% Vel (vel@LaTeXTemplates.com) and Harsh (harsh.gadgil@gmail.com)
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+% --------------------------------------
+% Notes Arthur
+%
+% Prérequis:
+% -- Pkg:
+% -> xetex
+% -> fonts-extra
+% -> pstricks
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+
+\documentclass[letterpaper]{twentysecondcv} % a4paper for A4
+
+% Command for printing skill overview bubbles
+\newcommand\skills{
+
+  \smartdiagram[bubble diagram]{
+    \textbf{\large Engineer}\\\textbf{\large Embedded}\\\textbf{\large Robotic},
+    \textbf{\large \ros}\\\textbf{Middleware},
+    \textbf{\large \href{https://en.wikipedia.org/wiki/Simultaneous_localization_and_mapping}{S.L.A.M.}},
+    \textbf{\large Kalman}\\\textbf{\href{https://en.wikipedia.org/wiki/Extended_Kalman_filter}{EKF} | \href{https://en.wikipedia.org/wiki/Kalman_filter#Unscented_Kalman_filter}{UKF}},
+    \textbf{\large Embedded}\\\textbf{ARM-DSP},
+    \textbf{~~\huge \faLinux~~}\\\textbf{\large \href{https://www.yoctoproject.org/}{Yocto}},
+    \textbf{\large Optimal}\\\textbf{\large Control}
+  }
+}
+  
+\newcommand{\cea}{\href{http://www.cea.fr/english}{CEA}}
+\newcommand{\ros}{\href{http://www.ros.org/}{R.O.S.}}
+  
+% Programming skill bars (0->6)
+\programming{
+  {JavaScript $\textbullet$ \large \LaTeX / 1},
+  {Matlab $\textbullet$ Simulink / 3},
+  {Bash $\textbullet$ CMake $\textbullet$ Make $\textbullet$ Emacs / 3.5},
+  {C $\textbullet$ C++  $\textbullet$ Python $\textbullet$ Git $\textbullet$ \ros / 5}}
+
+
+% Lang skill bars (0->6)
+\lang{
+  {Spanish $\textbullet$ Japanese / 0.5},  
+  {English / 4.5},
+  {French / 6}}
+
+%----------------------------------------------------------------------------------------
+%	 PERSONAL INFORMATION
+%----------------------------------------------------------------------------------------
+% If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
+
+\cvname{Arthur Valiente} % Your name
+\cvjobtitle{ \textbf{Research Engineer} \\ Robotic - Automation \\ Embedded Systems} % Job
+% title/career
+
+\cvlinkedin{/in/arthur-valiente-1866937b}
+\cvgithub{ArthurVal}
+\cvnumberphone{+33.6.77.20.10.54} % Phone number
+\cvsite{} % Personal website
+\cvaddress{\parbox[c]{5cm}{32 Rue Charles de Gaulle \newline 91400 Orsay - France}}
+\cvmail{valiente.arthur@gmail.com} % Email address
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makeprofile % Print the sidebar
+
+%----------------------------------------------------------------------------------------
+%	 EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{twenty}
+  \twentyitem
+  {2012 - 2015}
+  {}
+  {Master degree in Engineering: Electrical \& Automation}
+  {\href{http://www.enseeiht.fr/en/index.html}{INP-ENSEEIHT}}
+  {
+    \vspace{-2mm}               %Hack because I don't know why but there is
+                                %blank space ..
+    \begin{itemize}
+    \item \small Control, Decision and IT for Critical Systems (CDISC)
+    \item \small Development of Critical IT Systems (DeSIC)
+    \end{itemize}
+  }
+  \\
+  \twentyitem
+  {2010 - 2012}
+  {}
+  {2-years University degree in technology (HND)}
+  {\href{http://iut-meph.ups-tlse.fr/}{I.U.T Paul Sabatier, Toulouse}}
+  {
+    \vspace{-2mm}
+    \begin{itemize}
+    \item \small Physicals Measurements
+    \item \small Instrumental Techniques
+    \end{itemize}
+  }
+  \\
+  \twentyitem
+  {2010}
+  {}
+  {A-level in Engineer Science}
+  {\href{http://alexis-monteil.entmip.fr/}{Lycée Alexis Monteil, Rodez}}
+  {}
+  % \twentyitem{<dates>}{<dates>}{<title>}{<location>}{<description>}
+\end{twenty}
+%----------------------------------------------------------------------------------------
+%	 EXPERIENCE
+%----------------------------------------------------------------------------------------
+\section{Experience}
+\begin{twenty} % Environment for a list with descriptions
+  \twentyitem
+  {Jul 2018 -}
+  {Now}
+  {Fixed-term contract: Research Engineer, 18 months}
+  {\cea-DRF-IRFU, Paris}
+  {
+    \textbf{\href{http://www.svom.fr/en/}{SVOM Project}}: In charge of the
+    automatic test bench of the onboard software for the ECLAIRS Gamma-Ray instrument
+    \begin{itemize}
+    \item \textbf{\cea\ - \href{http://www.irap.omp.eu/en/}{IRAP} -
+        \href{https://cnes.fr/en}{CNES}} collaboration
+    \item Development of the distributed Local Test Unit (2x Zedboards, PC, ...)
+      (C++, Python)
+    \item \href{https://docs.pytest.org/en/latest/contents.html}{PyTest}
+      testing framework development
+    \item Development of scripts associated to the unit test case (Python)
+    \end{itemize}
+  }
+  \\
+  \twentyitem
+  {Jan 2017 -}
+  {Dec 2017}
+  {Fixed-term contract: Research Engineer, 12 months}
+  {\cea-DRT-LIST, Paris}
+  {
+    In charge of the software development for robotic applications
+    \begin{itemize}
+    \item Co-responsible of the software development (Git Admin - \ros)
+    \item \href{https://en.wikipedia.org/wiki/Voronoi_diagram}{Voronoi diagram}
+      \& Occupancy grid algorithms development (C++)
+    \item Hybrid topological SLAM for mobile robot (Lidar / IMU / RBG-D Camera /
+      ...) (C++)
+    \item
+      \textbf{\href{https://www.youtube.com/watch?time_continue=3&v=mneZNnir0s0}{FACE
+        Project}}: In charge of the multi-\href{https://en.wikipedia.org/wiki/System_on_a_chip}{SoC} prototype (Renesas
+      R-Car H3, Nvidia Tx3, Kalray MPPA Bostan)
+    \item Linux Yocto layers development for R-Car H3
+    \end{itemize}
+  }
+  \\
+  \twentyitem
+  {Sep 2015 -}
+  {Dec 2015}
+  {Fixed-term contract: Research Engineer, 3 months}  
+  {\href{https://www.irit.fr/?lang=en}{IRIT, Toulouse}}
+  {
+    \textbf{\href{http://www.agence-nationale-recherche.fr/Project-ANR-12-CORD-0003}{ANR
+        RIDDLE} Project}: Development of the robotic demonstration on
+    \href{http://www.willowgarage.com/pages/pr2/overview}{PR2} and
+    \href{https://spectrum.ieee.org/automaton/robotics/humanoids/aldebaran-robotics-introduces-romeo-finally}{ROMEO} robots
+    \begin{itemize}
+    \item Importing object recognition and human interaction (vision and voice)
+      algorithms on
+      \href{https://spectrum.ieee.org/automaton/robotics/humanoids/aldebaran-robotics-introduces-romeo-finally}{ROMEO}
+      robot of Aldebaran Robotics
+    \item Creating a bridge between object recognition algorithms - simulator
+      using \ros\ (C++)
+    \end{itemize}
+  }
+  \\
+  \twentyitem
+  {Mar 2015 -}
+  {Sep 2015}
+  {Internship: Computer Vision data fusion}
+  {\href{https://www.laas.fr/public/en}{CNRS-LAAS, Toulouse}}
+  {
+    \textbf{\href{http://www.agence-nationale-recherche.fr/Project-ANR-12-CORD-0003}{ANR
+        RIDDLE} Project}: Fusion of computer vision \& radio-frequency method for
+    object recognition
+    \begin{itemize}
+    \item Development of object recognition software on \ros\ using RGB-D
+      Kinect camera
+      (\href{http://www.stefan-hinterstoisser.com/papers/hinterstoisser2011linemod.pdf}{LINEMOD}
+      \& \href{http://wiki.ros.org/tabletop_object_detector}{TABLETOP}) (C++)
+    \item Creating a custom communication protocol using
+      \href{https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter}{UART}
+      on \href{https://en.wikipedia.org/wiki/Digital_signal_processor}{DSP} (C, C++)
+    \end{itemize}
+  }
+  \\
+  \twentyitem
+  {Feb 2015 -}
+  {Mar 2015}
+  {Student Project: Sound sources localization}
+  {\href{https://www.laas.fr/public/en}{CNRS-LAAS, Toulouse}}
+  {
+    \textbf{\href{http://twoears.eu/}{TWO!EARS} Project}: Probabilistic
+    algorithms for binaural sound sources localization
+    \begin{itemize}
+    \item Multi-Hypothesis Unscented Kalman Filter (MH-UKF) (C++)
+    \item Binaural sound sources localization on \ros\ (C++)
+    \end{itemize}
+  }
+  \\
+  \twentyitem
+  {Jul 2014 -}
+  {Aug 2014}
+  {Internship: Technician}
+  {\href{http://www.spherea.com/en}{Cassidian Test \& Services, Colomiers}}
+  {
+    Technician Internship - PCIe link on FPGA (VHDL)
+  }
+  \\
+  \twentyitem
+  {Jul 2013 -}
+  {Aug 2013}
+  {Intership: Worker}
+  {Tokyo / Kitakyushu, Japon}
+  {
+    House painter
+  }
+  \\
+  \twentyitem
+  {Apr 2012 -}
+  {Jun 2012}
+  {Internship: Technician}  
+  {\href{https://www.gtptech.com/}{GTP Technology}, Labège}
+  {
+    Instrumentation technician - Data acquisition (Modbus, UART, RS-485)
+  }  
+  % \twentyitem{<dates>}{<title>}{<location>}{<description>}
+\end{twenty}
+\end{document}
+
+%%% Local Variables:
+%%% mode: LaTeX
+%%% TeX-PDF-mode: t
+%%% TeX-command-extra-options: "-output-directory=out"
+%%% TeX-engine: xetex
+%%% End:

@@ -30,15 +30,14 @@
 
 % Command for printing skill overview bubbles
 \newcommand\skills{
-
   \smartdiagram[bubble diagram]{
-    \textbf{\large Ingénieur}\\\textbf{\large Robotique},
+    \textbf{\large Ingénieur}\\\textbf{\large Embarqué}\\\textbf{\large Robotique},
     \textbf{\large \ros}\\\textbf{Intergiciel},
     \textbf{\large \href{https://en.wikipedia.org/wiki/Simultaneous_localization_and_mapping}{S.L.A.M.}},
     \textbf{\large Kalman}\\\textbf{\href{https://en.wikipedia.org/wiki/Extended_Kalman_filter}{EKF} | \href{https://en.wikipedia.org/wiki/Kalman_filter#Unscented_Kalman_filter}{UKF}},
     \textbf{\large Embarqué}\\\textbf{ARM-DSP},
     \textbf{~~\huge \faLinux~~}\\\textbf{\large \href{https://www.yoctoproject.org/}{Yocto}},
-    \textbf{Traitement}\\\textbf{Image}
+    \textbf{\large Contrôle}\\\textbf{\large Optimal}
   }
 }
   
@@ -65,7 +64,7 @@
 % If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
 
 \cvname{Arthur Valiente} % Your name
-\cvjobtitle{ \textbf{Ingénieur INP-ENSEEIHT} \\ Robotique - Automatique \\ Systèmes Embarqués} % Job
+\cvjobtitle{ \textbf{Ingénieur INP-ENSEEIHT} \\ Systèmes Embarqués \\ Robotique - Automatique} % Job
 % title/career
 
 \cvlinkedin{/in/arthur-valiente-1866937b}
@@ -83,7 +82,10 @@
 
 %----------------------------------------------------------------------------------------
 %	 EDUCATION
-%----------------------------------------------------------------------------------------
+%  ----------------------------------------------------------------------------------------
+
+% \textit{Curieux}
+
 \section{Formation}
 \begin{twenty}
   \twentyitem
@@ -127,17 +129,20 @@
 \begin{twenty} % Environment for a list with descriptions
   \twentyitem
   {Juil 2018 -}
-  {Présent}
+  {Déce 2019}
   {CDD: Ingénieur de Recherche - 18 mois}
   {\cea-DRF-IRFU, Saclay}
   {
-    \textbf{\href{http://www.svom.fr/}{Projet SVOM}}: Responsable du banc de
-    test automatique du logiciel embarqué de la caméra ECLAIRs
+    \textbf{\href{http://www.svom.fr/}{Projet SVOM}}: \textbf{Responsable du banc de
+    test distribué automatique} du logiciel embarqué de la caméra ECLAIRs
+    (Détection de sursauts gamma)
     \begin{itemize}
-    \item Collaboration \textbf{\cea\ - \href{http://www.irap.omp.eu/}{IRAP} - \href{https://cnes.fr/fr}{CNES}}
-    \item Développement C++/Python de l'infrastructure de test global
-    \item Utilisation séquenceur de test \href{https://docs.pytest.org/en/latest/contents.html}{PyTest}
-    \item En charge de la création/rédaction des scripts de tests unitaires
+    \item Collaboration \textbf{\cea\ - \href{http://www.irap.omp.eu/}{IRAP} -
+        \href{https://cnes.fr/fr}{CNES} - CNSA}
+    \item Développement de l'infrastructure de \textbf{test distribuée} (2x Zedboard, PC,
+      plateforme embarqué ECLAIRs) (\textbf{C++}, \textbf{Python})
+    \item Utilisation du séquenceur de test \textbf{\href{https://docs.pytest.org/en/latest/contents.html}{PyTest}}
+    \item Création/rédaction des scripts de tests unitaires (\textbf{Python})
     \end{itemize}
   }
   \\
@@ -147,19 +152,21 @@
   {CDD: Ingénieur de Recherche - 12 mois}
   {\cea-DRT-LIST, Saclay}
   {
-    Responsable développements logiciel pour applications robotique
+    \textbf{Responsable développements logiciel pour applications robotiques}
     \begin{itemize}
-    \item Co-responsable développement logiciel (Git Admin - \ros)
+    \item Co-responsable développement logiciel (\textbf{Git Admin} - \ros)
     \item Développement d'algorithmes de grille d'occupation et de construction
-      de \href{https://fr.wikipedia.org/wiki/Diagramme_de_Vorono\%C3\%AF}{graphe de Voronoi}
+      de \href{https://fr.wikipedia.org/wiki/Diagramme_de_Vorono\%C3\%AF}{graphe
+        de Voronoi} (\textbf{C++})
     \item SLAM hybride topologique pour robot mobile (Lidar / IMU / Caméra RBG-D
-      / ...)
+      / ...) (\textbf{C++})
     \item
-      \textbf{\href{https://www.youtube.com/watch?time_continue=3&v=mneZNnir0s0}{Projet
-          FACE}}: En charge de la démonstration du prototype
-      multi-\href{https://en.wikipedia.org/wiki/System_on_a_chip}{SoC} (Renesas
-      R-Car H3, Nvidia Tx3, Kalray MPPA Bostan)
-    \item Développement 'layers' Linux Yocto pour R-Car H3
+      \textbf{\href{https://www.designspot.fr/portfolio/face/}{Projet
+          FACE}}: En charge de la \textbf{création du prototype de démonstration} multi
+      \href{https://en.wikipedia.org/wiki/System_on_a_chip}{System-On-Chip}
+      distribué (Renesas R-Car H3, Nvidia Tx2, Kalray MPPA Bostan) pour la
+      \textbf{voiture autonome}
+    \item Développement de 'layers' \textbf{Linux embarqué Yocto} pour R-Car H3
     \end{itemize}
   }
   \\
@@ -171,9 +178,11 @@
   {
     \textbf{Projet
       \href{http://www.agence-nationale-recherche.fr/Project-ANR-12-CORD-0003}{ANR
-        RIDDLE}} : Développement démonstration robotique sur robots \href{http://www.willowgarage.com/pages/pr2/overview}{PR2} et \href{https://spectrum.ieee.org/automaton/robotics/humanoids/aldebaran-robotics-introduces-romeo-finally}{ROMEO}
+        RIDDLE}} : Développement \textbf{démonstration robotique} sur robots
+    \href{http://www.willowgarage.com/pages/pr2/overview}{PR2} et
+    \href{https://spectrum.ieee.org/automaton/robotics/humanoids/aldebaran-robotics-introduces-romeo-finally}{ROMEO}
     \begin{itemize}
-    \item Importation d'algoritmes de détection d'objets, intéractions (vision
+    \item Importation d'algorithmes de détection d'objets, intéractions (vision
       et vocal) sur robot
       \href{https://spectrum.ieee.org/automaton/robotics/humanoids/aldebaran-robotics-introduces-romeo-finally}{ROMEO}
       d'Aldebaran Robotics
@@ -189,16 +198,16 @@
   {
     \textbf{Projet
       \href{http://www.agence-nationale-recherche.fr/Project-ANR-12-CORD-0003}{ANR
-        RIDDLE}} : Fusion traitement d'image / détecteur radiofréquence pour
-    détection d'objets
+        RIDDLE}} : \textbf{Fusion traitement d'image / détecteur radiofréquence}
+    pour la détection et la localisation d'objets
     \begin{itemize}
-    \item Développement C++ sur \ros\ de briques de
-      détection d'objets via traitement d'image
-      (\href{http://www.stefan-hinterstoisser.com/papers/hinterstoisser2011linemod.pdf}{LINEMOD}
-      \& \href{http://wiki.ros.org/tabletop_object_detector}{TABLETOP})
-    \item Développement protocole de communication C++ via
-      \href{https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter}{UART}
-      sur \href{https://en.wikipedia.org/wiki/Digital_signal_processor}{DSP}
+    \item Développement sur \ros\ de briques de détection d'objets via
+      traitement
+      d'image (\href{http://www.stefan-hinterstoisser.com/papers/hinterstoisser2011linemod.pdf}{LINEMOD} 
+      \& \href{http://wiki.ros.org/tabletop_object_detector}{TABLETOP}) (\textbf{C++})
+    \item Développement protocole de communication
+      \href{https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter}{UART} 
+      sur \href{https://en.wikipedia.org/wiki/Digital_signal_processor}{DSP} (\textbf{C++})
     \end{itemize}
   }
   \\
@@ -212,9 +221,8 @@
       \href{http://twoears.eu/}{TWO!EARS}} : Algorithme probabilistique de
     localisation binaurale
     \begin{itemize}
-    \item Développement C++ de filtre de Kalman Unscented Multi-Hypothèses
-      (MH-UKF)
-    \item Détection binaurale de source sonore sur \ros
+    \item \textbf{Filtre de Kalman Unscented Multi-Hypothèses} (MH-UKF) (\textbf{C++})
+    \item Détection binaurale de source sonore sur \ros\ (\textbf{C++})
     \end{itemize}
   }
   \\
@@ -224,7 +232,7 @@
   {Stage: Technicien}
   {\href{http://www.spherea.com/fr}{Cassidian Test \& Services, Colomiers}}
   {
-    Stage technicien création liaison PCIe VHDL sur FPGA
+    Stage technicien création liaison PCIe sur FPGA Spartan 6 (VHDL)
   }
   \\
   \twentyitem
@@ -242,7 +250,7 @@
   {Stage: Technicien}
   {\href{https://www.gtptech.com/}{GTP Technology}, Labège}
   {
-    Technicien en instrumentation, acquisition de données (Modbus, UART, RS-485)
+    Instrumentation, \textbf{acquisition de données} (Modbus, UART, RS-485)
   }  
   % \twentyitem{<dates>}{<title>}{<location>}{<description>}
 \end{twenty}
@@ -251,6 +259,6 @@
 %%% Local Variables:
 %%% mode: LaTeX
 %%% TeX-PDF-mode: t
-%%% TeX-command-extra-options: "-output-directory=out"
 %%% TeX-engine: xetex
 %%% End:
+%%% \end{document}

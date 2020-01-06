@@ -120,7 +120,7 @@
 % --------------------------------------------------------------------------------------
 % 	FONTS
 %-------------------------------------------------------------------------------------
-\newfontfamily\headingfont[Path = fonts/]{segoeuib.ttf}
+\newfontfamily\headingfont[Path = ../fonts/]{segoeuib.ttf}
 
 %----------------------------------------------------------------------------------------
 %	 SIDEBAR DEFINITIONS
@@ -161,7 +161,7 @@
 
 \newcommand\lang[1]{ 
   \renewcommand{\lang}{
-    \drawskillz[$A\,\to\,B$]{Langues}{#1} %Note: Arg par défaut marche pas ...
+    \drawskillz{Langues}{#1} %Note: Arg par défaut marche pas ...
   }
 }
 
@@ -279,7 +279,7 @@
 
     % ------------------------------------------------
     \programming
-    
+        
     \lang
     % ------------------------------------------------    
 
